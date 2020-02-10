@@ -13,9 +13,9 @@
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:background="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="69dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/githubUserImage"
@@ -28,10 +28,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/githubUsername"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
