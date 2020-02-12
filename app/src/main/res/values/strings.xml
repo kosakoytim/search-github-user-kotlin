@@ -5,5 +5,8 @@
     <string name="search_bar_placeholder">Search GitHub users</string>
     <string name="search_not_found">User Not Found</string>
     <string name="search_loading">Fetching Data...</string>
+    <string name="search_error_403">Error 403 - Please try again later</string>
+    <string name="search_error_422">Error 422 - Please try again later</string>
+    <string name="search_error_unknown">Error Unknown - Please try again later</string>
     <string name="search_start">Type in above field to find user</string>
 </resources>

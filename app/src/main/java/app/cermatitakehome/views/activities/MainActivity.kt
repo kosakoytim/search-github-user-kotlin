@@ -7,6 +7,7 @@ import android.os.Build
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.view.View
 import android.widget.EditText
 import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.Observer
@@ -14,10 +15,9 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import app.cermatitakehome.views.adapters.GithubUserRecyclerAdapter
 import app.cermatitakehome.R
-import app.cermatitakehome.models.GithubUserSearchItemModel
 import app.cermatitakehome.viewModels.MainActivityViewModel
+import app.cermatitakehome.viewModels.SearchStatus
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.github_user_item.*
 import kotlinx.android.synthetic.main.search_bar.*
 
 
@@ -40,12 +40,57 @@ class MainActivity : AppCompatActivity() {
         listGithubUser.layoutManager = LinearLayoutManager(this)
         viewModel.searchData.observe(this, Observer {
             searchData -> run {
-                Log.d("MAIN_ACTIVITY", "HERE: " + searchData.toString())
                 listGithubUser.adapter =
                     GithubUserRecyclerAdapter(
                         this,
                         searchData.toList()
                     )
+            }
+        })
+
+        viewModel.searchStatus.observe(this, Observer {
+            searchStatus -> run {
+                when(searchStatus) {
+                    SearchStatus.AWAITING_INPUT -> run {
+                        listGithubUser.visibility = View.GONE
+                        textStatus.visibility = View.VISIBLE
+                        textStatus.setText(resources.getString(R.string.search_start))
+                    }
+                    SearchStatus.LOADING -> run {
+                        listGithubUser.visibility = View.GONE
+                        textStatus.visibility = View.VISIBLE
+                        textStatus.setText(resources.getString(R.string.search_loading))
+                    }
+                    SearchStatus.COMPLETE -> run {
+                        listGithubUser.visibility = View.VISIBLE
+                        textStatus.visibility = View.GONE
+                    }
+                    SearchStatus.NO_INPUT -> run {
+                        listGithubUser.visibility = View.GONE
+                        textStatus.visibility = View.VISIBLE
+                        textStatus.setText(resources.getString(R.string.search_start))
+                    }
+                    SearchStatus.ERROR_403 -> run {
+                        listGithubUser.visibility = View.GONE
+                        textStatus.visibility = View.VISIBLE
+                        textStatus.setText(R.string.search_error_403)
+                    }
+                    SearchStatus.ERROR_422 -> run {
+                        listGithubUser.visibility = View.GONE
+                        textStatus.visibility = View.VISIBLE
+                        textStatus.setText(R.string.search_error_422)
+                    }
+                    SearchStatus.ERROR_UNKNOWN -> run {
+                        listGithubUser.visibility = View.GONE
+                        textStatus.visibility = View.VISIBLE
+                        textStatus.setText(R.string.search_error_unknown)
+                    }
+                    SearchStatus.NOT_FOUND -> run {
+                        listGithubUser.visibility = View.GONE
+                        textStatus.visibility = View.VISIBLE
+                        textStatus.setText(resources.getString(R.string.search_not_found))
+                    }
+                }
             }
         })
     }
