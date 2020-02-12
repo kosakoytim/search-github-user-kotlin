@@ -45,7 +45,6 @@ class MainActivityViewModel() : ViewModel() {
         if (inputNotEmpty(searchQuery)) {
             searchStatus.postValue(SearchStatus.LOADING)
             disposable = githubApiServe.getUsers(searchQuery)
-                .throttleWithTimeout(250, TimeUnit.MILLISECONDS)
                 .subscribeOn(Schedulers.io())
                 .map {
                     if (it.items != null && dataNotEmpty(it.items)) {
@@ -58,14 +57,17 @@ class MainActivityViewModel() : ViewModel() {
                     }
                 }
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({}, {
-                    if (it.message != null) {
-                        if (it.message.toString().contains("403")) { searchStatus.postValue(SearchStatus.ERROR_403) }
-                        else if (it.message.toString().contains("422")) { searchStatus.postValue(SearchStatus.ERROR_422) }
-                        else { searchStatus.postValue(SearchStatus.ERROR_UNKNOWN) }
+                .subscribe(
+                    {},
+                    {
+                        if (it.message != null) {
+                            if (it.message.toString().contains("403")) { searchStatus.postValue(SearchStatus.ERROR_403) }
+                            else if (it.message.toString().contains("422")) { searchStatus.postValue(SearchStatus.ERROR_422) }
+                            else { searchStatus.postValue(SearchStatus.ERROR_UNKNOWN) }
+                        }
+                        Log.w(activityTag, it.toString())
                     }
-                    Log.w(activityTag, it.toString())
-                })
+                )
         }
     }
 

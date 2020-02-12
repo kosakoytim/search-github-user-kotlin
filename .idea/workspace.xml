@@ -23,21 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a9c180b-4ddc-4c9d-b660-fd95d1d0cd6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/viewModels/SearchStatus.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/viewModels/MainActivityViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/viewModels/MainActivityViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/views/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/views/activities/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,20 +67,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/views/activities/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-235">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="23" />
+            <state relative-caret-position="1755">
+              <caret line="117" column="10" lean-forward="true" selection-start-line="117" selection-start-column="10" selection-end-line="117" selection-end-column="10" />
               <folding>
-                <element signature="e#2092#2134#1" expanded="true" />
-                <element signature="e#2374#2418#1" expanded="true" />
-                <element signature="e#2855#2897#1" expanded="true" />
-                <element signature="e#3139#3164#1" expanded="true" />
-                <element signature="e#3406#3431#1" expanded="true" />
-                <element signature="e#3677#3706#1" expanded="true" />
-                <element signature="e#3926#3972#1" expanded="true" />
-                <element signature="e#4201#4253#1" expanded="true" />
+                <element signature="e#46#851#0" expanded="true" />
+                <element signature="e#2111#2153#1" expanded="true" />
+                <element signature="e#2393#2437#1" expanded="true" />
+                <element signature="e#2874#2916#1" expanded="true" />
+                <element signature="e#3158#3183#1" expanded="true" />
+                <element signature="e#3425#3450#1" expanded="true" />
+                <element signature="e#3696#3725#1" expanded="true" />
+                <element signature="e#3967#4013#1" expanded="true" />
+                <element signature="e#4242#4294#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,62 +97,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/viewModels/MainActivityViewModel.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+            <state relative-caret-position="55">
+              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
               <folding>
                 <element signature="e#40#431#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/viewModels/SearchStatus.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/utils/Constants.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/services/GithubServices.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-              <folding>
-                <element signature="e#39#366#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="78" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -214,8 +161,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/models/GithubUserModel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/viewModels/SearchStatus.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/views/activities/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/viewModels/MainActivityViewModel.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/views/activities/MainActivity.kt" />
       </list>
     </option>
   </component>
@@ -635,16 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/services/GithubServices.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-          <folding>
-            <element signature="e#39#366#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/views/adapters/GithubUserRecyclerAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -666,13 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.0.1/194434fed571c2038f2d78baad1acd0d86394c3b/rxjava-2.0.1-sources.jar!/io/reactivex/Observable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="5942" column="52" lean-forward="true" selection-start-line="5942" selection-start-column="52" selection-end-line="5942" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/viewModels/SearchStatus.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -688,29 +618,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/viewModels/MainActivityViewModel.kt">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.0.1/194434fed571c2038f2d78baad1acd0d86394c3b/rxjava-2.0.1-sources.jar!/io/reactivex/Observable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+        <state relative-caret-position="123">
+          <caret line="10093" column="44" lean-forward="true" selection-start-line="10093" selection-start-column="44" selection-end-line="10093" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/services/GithubServices.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
           <folding>
-            <element signature="e#40#431#0" expanded="true" />
+            <element signature="e#39#366#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/views/activities/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-235">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="23" />
+        <state relative-caret-position="1755">
+          <caret line="117" column="10" lean-forward="true" selection-start-line="117" selection-start-column="10" selection-end-line="117" selection-end-column="10" />
           <folding>
-            <element signature="e#2092#2134#1" expanded="true" />
-            <element signature="e#2374#2418#1" expanded="true" />
-            <element signature="e#2855#2897#1" expanded="true" />
-            <element signature="e#3139#3164#1" expanded="true" />
-            <element signature="e#3406#3431#1" expanded="true" />
-            <element signature="e#3677#3706#1" expanded="true" />
-            <element signature="e#3926#3972#1" expanded="true" />
-            <element signature="e#4201#4253#1" expanded="true" />
+            <element signature="e#46#851#0" expanded="true" />
+            <element signature="e#2111#2153#1" expanded="true" />
+            <element signature="e#2393#2437#1" expanded="true" />
+            <element signature="e#2874#2916#1" expanded="true" />
+            <element signature="e#3158#3183#1" expanded="true" />
+            <element signature="e#3425#3450#1" expanded="true" />
+            <element signature="e#3696#3725#1" expanded="true" />
+            <element signature="e#3967#4013#1" expanded="true" />
+            <element signature="e#4242#4294#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/cermatitakehome/viewModels/MainActivityViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <element signature="e#40#431#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -19,6 +19,7 @@ import app.cermatitakehome.viewModels.MainActivityViewModel
 import app.cermatitakehome.viewModels.SearchStatus
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.search_bar.*
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -99,13 +100,21 @@ class MainActivity : AppCompatActivity() {
         val search_bar_placeholder : EditText = findViewById(R.id.searchInput)
         search_bar_placeholder.setHint(resources.getString(R.string.search_bar_placeholder))
         searchInput.addTextChangedListener(object: TextWatcher {
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                viewModel.getGithubUsersData(s.toString())
-            }
-
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
-            override fun afterTextChanged(s: Editable?) {}
+            private var timer = Timer()
+            private val debounce: Long = 300
+
+            override fun afterTextChanged(s: Editable?) {
+                timer.cancel()
+                timer = Timer()
+                timer.schedule(object : TimerTask(){
+                    override fun run() {
+                        viewModel.getGithubUsersData(s.toString())
+                    }
+                }, debounce)
+            }
         })
     }
 
