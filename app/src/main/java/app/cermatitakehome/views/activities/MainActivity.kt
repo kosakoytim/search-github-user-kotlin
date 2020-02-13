@@ -39,16 +39,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpSearchContent() {
         listGithubUser.layoutManager = LinearLayoutManager(this)
-        viewModel.searchData.observe(this, Observer {
-            searchData -> run {
-                listGithubUser.adapter =
-                    GithubUserRecyclerAdapter(
-                        this,
-                        searchData.toList()
-                    )
-            }
-        })
-
         viewModel.searchStatus.observe(this, Observer {
             searchStatus -> run {
                 when(searchStatus) {
@@ -65,6 +55,12 @@ class MainActivity : AppCompatActivity() {
                     SearchStatus.COMPLETE -> run {
                         listGithubUser.visibility = View.VISIBLE
                         textStatus.visibility = View.GONE
+
+                        listGithubUser.adapter =
+                            GithubUserRecyclerAdapter(
+                                this,
+                                viewModel.searchData
+                            )
                     }
                     SearchStatus.NO_INPUT -> run {
                         listGithubUser.visibility = View.GONE
@@ -120,7 +116,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        listGithubUser.adapter?.notifyDataSetChanged()
+//        listGithubUser.adapter?.notifyDataSetChanged()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

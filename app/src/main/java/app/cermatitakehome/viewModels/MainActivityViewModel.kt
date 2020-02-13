@@ -11,8 +11,9 @@ import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 
 class MainActivityViewModel() : ViewModel() {
-    var searchData : MutableLiveData<ArrayList<GithubUserSearchItemModel>> = MutableLiveData()
+    var searchData : ArrayList<GithubUserSearchItemModel> = ArrayList()
     var searchStatus : MutableLiveData<SearchStatus> = MutableLiveData()
+    var searchString : String = String()
 
     init {
         searchStatus.postValue(SearchStatus.AWAITING_INPUT)
@@ -25,7 +26,7 @@ class MainActivityViewModel() : ViewModel() {
         GithubServices.create()
     }
 
-    fun dataNotEmpty(items : List<GithubUserSearchItemModel>) : Boolean {
+    private fun dataNotEmpty(items : List<GithubUserSearchItemModel>) : Boolean {
         if (items.isEmpty()) {
             searchStatus.postValue(SearchStatus.NOT_FOUND)
             return false
@@ -33,7 +34,7 @@ class MainActivityViewModel() : ViewModel() {
         return true
     }
 
-    fun inputNotEmpty(input : String) : Boolean {
+    private fun inputNotEmpty(input : String) : Boolean {
         if (input.length == 0) {
             searchStatus.postValue(SearchStatus.NO_INPUT)
             return false
@@ -41,8 +42,16 @@ class MainActivityViewModel() : ViewModel() {
         return true
     }
 
+    private fun inputShouldRunOnce(input: String) : Boolean {
+        if (input == searchString) {
+            return false
+        }
+        return true
+    }
+
     fun getGithubUsersData(searchQuery : String) {
-        if (inputNotEmpty(searchQuery)) {
+        if (inputNotEmpty(searchQuery) && inputShouldRunOnce(searchQuery)) {
+            searchString = searchQuery
             searchStatus.postValue(SearchStatus.LOADING)
             disposable = githubApiServe.getUsers(searchQuery)
                 .subscribeOn(Schedulers.io())
@@ -52,7 +61,7 @@ class MainActivityViewModel() : ViewModel() {
                         it.items.forEach {
                             data.add(it)
                         }
-                        searchData.postValue(data)
+                        searchData = data
                         searchStatus.postValue(SearchStatus.COMPLETE)
                     }
                 }
